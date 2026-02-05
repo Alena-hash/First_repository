@@ -26,4 +26,3 @@ class CheckoutPage:
             )
         )
         return total_element.text
-    
