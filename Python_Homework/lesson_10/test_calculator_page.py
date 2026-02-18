@@ -18,14 +18,13 @@ def test_calculator():
         "https://bonigarcia.dev/selenium-webdriver-java/"
         "slow-calculator.html")
 
-    page.set_delay(45)
     page.click_button("7")
     page.click_button("+")
     page.click_button("8")
     page.click_button("=")
 
     with allure.step("Ожидание появления результата 15"):
-        wait = WebDriverWait(driver, 50)
+        wait = WebDriverWait(driver, 45)
     wait.until(
         EC.text_to_be_present_in_element(
             (By.CLASS_NAME, "screen"),
